@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7, 9 Aug 2023) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{multicol}
+\usepackage{tasks}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" mmayer.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\large\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\large\bfseries}
+\renewcommand{\cvsubsectionfont}{\small\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{\Large Sai Sampath Kedari}
+\tagline{\small I am passionate about leveraging optimization, machine learning, control theory, and uncertainty quantification to develop robust, safe, and efficient algorithms for dynamic, uncertain environments, with a keen interest in the mathematical aspects of these fields.}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+% \photoR{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{sampath@umich.edu}
+  \phone{734-510-1994}
+  % \mailaddress{Address, Street, 00000 County}
+  % \location{Sunnyvale, CA}
+  \homepage{SaiSampathKedari}
+  % \twitter{@marissamayer}
+  \linkedin{sai-sampath-kedari}
+  \github{SaiSampathKedari} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+% \cvsection{Objective}
+% \begin{itemize}
+%     \item Seeking a Research Opportunity in state estimation, dynamics learning, and controls, with a focus on applications for mobile robots.
+% \end{itemize}
+    
+% \item Seeking Full-time opportunities in the field of Controls, Machine Learning for Mobile robots
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+  
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\switchcolumn
+\cvsection{EDUCATION}
+\cvevent{M.S. in Mechanical Eng. (Robotics)}{University of Michigan, Ann Arbor}{Jan'23 - Apr'24}{GPA: 3.50/4}
+\divider
+\cvevent{M.S. in Automotive Eng. (Controls \& Dynamics)}{University of Michigan, Ann Arbor}{Aug'21 - Dec'22}{GPA: 3.64/4}
+% \divider
+% \cvevent{B.Tech in Mechanical Engineering }{National Institute of Technology Rourkela, India}{Jul'15 - May'19}{GPA: 8.22/10}
+    % \resumeSubheading
+    %   {National Institute of Technology Rourkela, India}{July 2015 - May 2019}
+    %   {Bachelor of Technology in Mechanical Engineering}{ GPA: 8.22/10}
+
+\cvsection{COURSEWORK}
+\vspace{-2em}
+\begin{multicols}{2}
+    % \noindent
+    % \raggedcolumns
+    \begin{itemize}[itemsep=-2pt, parsep=4pt]
+        \item Infer/Est/Learn
+        \item Prob Dist Theory
+        \item Math for Robotics
+        \item Lin Sys Theory 
+         
+         \item Convex Optimizat
+         \item Machine Learning
+        \item Nonlinear Control
+        \item Data Str \& Algo
+    \end{itemize}
+\end{multicols}
+\vspace*{-1.0\multicolsep}
+
+\cvsection{TECHNICAL SKILLS}
+
+\cvtag{C/C++}
+\cvtag{OPP}
+\cvtag{CMake}
+\cvtag{TCL/TK }
+\cvtag{Python}
+\cvtag{ROS1}
+\cvtag{Matlab}
+\cvtag{Batch Scripting}
+
+ % \begin{itemize}[leftmargin=0.15in, label={}]
+ %    \small{\item{
+ %     \textbf{Programming Languages}{: C/C++, CMake, OOPs, Python, ROS1, Matlab, TCL/TK Scripting, Batch Scripting}\\
+ %     \textbf{Certificates}{: SAE International, ASME-NIT Rourkela, Formula student(FSAE)}
+ %    }}
+ % \end{itemize}
+
+
+\switchcolumn
+\cvsection{WORK EXPERIENCE}
+
+
+% \cvevent{Research Study}{ROAHM LAB: Prof Ram Vasudevan}{May'22 -- Aug'22}{Ann Arbor, MI}
+% \begin{itemize}
+% \item I worked on the system identification of Fetch Robot dynamic parameters (friction bwt links, mass, and inertia of links) utilizing open-loop testing, regression analysis, and phase-plane analysis."
+% \end{itemize}
+
+% \divider
+
+\cvevent{CATIA R\&D Software Developer}{Dassault Systems}{Sep'20 -- Aug'21}{Pune, India}
+\begin{itemize}
+\item Software Development of Functional Tolerance \& Annotations Workbench of CATIA using Advanced C++ , integrating the latest ISO Annotations standards.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer}{Altair Engineering}{Sep'2019 -- Sep'20}{Bangalore, India}
+\begin{itemize}
+\item Developed C++ HyperMesh commands to automate geometry meshing processes. Created Force Graphics Tab in MotionView Software for visualizing tire forces. Designed two-wheeler dynamics models and conducted stability analyses using MDL.
+\end{itemize}
+
+\divider
+
+\cvevent{Teaching Assistant, Physics 151/241/360- Elec \& Magn, Spec Relativity}{University of Michigan, Ann Arbor}{Aug'22 -- May'24}{Ann Arbor, MI}
+
+\end{paracol}
+
+\cvsection{PROJECTS}
+\cvevent{}{AEROSP 567: Statistical Inference, Estimation, and Learning}{Jan'2024 - May'2024}{University of Michigan, Ann Arbor}
+\begin{itemize}
+    \item  Implemented Monte Carlo sampling for estimating rare event probabilities in random walks, using variance reduction methods like importance sampling and multilevel Monte Carlo, with the addition of control variates for faster convergence. \href{https://drive.google.com/file/d/1Zj1cKTC8zAlYv7HGjWjmpgrZB7GvdGne/view?usp=drive_link}{\textbf{(Project Report)}}
+    \item Implemented Gaussian Process for scent distribution modeling in a 2D field from sparse sensor data of a flying robot. Developed a search strategy using Bayesian optimization to enhance search efficiency and minimize false positives. \href{https://drive.google.com/file/d/1rmVl7ab2_pvmfXvd2gHSURzPaVzqsEAP/view?usp=drive_link}{\textbf{(Project Report)}}
+    \item  Implemented Metropolis-Hastings, Adaptive Metropolis, and Delayed Rejection Adaptive Metropolis (DRAM-MCMC) sampling algorithms for parameter inference in dynamical systems, facilitating posterior sampling of parameter distributions. \href{https://drive.google.com/file/d/1U3EeO3B7XSDwNVYHuw6a2UAFkQemIKku/view?usp=drive_link}{\textbf{(Project Report)}}
+    \item  Implemented Extended Kalman Filter (EKF), Unscented Kalman Filter (UKF), Gauss-Hermite Kalman Filter (GHKF), and Particle Filtering algorithms for state estimation and prediction in nonlinear dynamic systems. \href{https://drive.google.com/file/d/1JPkWKbcHBsgtdJ1h-xOj_W0QmosTLNj2/view?usp=drive_link}{\textbf{(Project Report)}}
+\end{itemize}
+
+% \divider
+
+\cvevent{}{Literature Review : Prof. Alex Gorodetsky \href{https://drive.google.com/file/d/1RkUaKzeyvz4vG0zyT5cfK_vOzAU-4TTz/view?usp=drive_link}{\textbf{(Project Report)}} \href{https://drive.google.com/file/d/1XukVD8PcuhjwbzoHYmLOx7Em8Y0Q46XF/view?usp=drive_link}{(\textbf{PPT})}}{Jan'2024 - May'2024}{University of Michigan, Ann Arbor}
+\begin{itemize}
+    \item Literature Review on "Bayesian system ID: optimal management of parameter model, and measurement uncertainty"
+    \item This paper discusses the development of a mathematical objective function for joint parameter-state estimation in dynamic systems, which is fundamental for learning parameters and predicting states in System Identification, and highlights its impact on popular methods like DMD and SINDy.
+\end{itemize}
+
+% \divider
+
+\cvevent{}{Directed Study: Prof. Dimitra Panagou}{Jan'2024 - Ongoing}{University of Michigan, Ann Arbor}
+\begin{itemize}
+    \item Developed Adaptive Conformal Prediction for Gaussian Process models to establish confidence intervals around estimates.
+\end{itemize}
+
+% \divider
+
+\cvevent{}{Machine Learning Course Project}{Aug'2022 - Dec'2022}{University of Michigan, Ann Arbor}
+\begin{itemize}
+    \item Reproducibility Report on Composing Partial Differential Equations with Physics-Aware Neural Networks, Accepted at ICML2022
+    \item Implemented physics-aware neural networks, including TCN, ConvLSTM, PhyDNet, and FINN, for the learning of PDEs and ODEs
+\end{itemize}
+
+% \divider
+
+\cvevent{}{ROAHM LAB: Prof Ram Vasudevan}{May'2022 - Aug-'2022}{University of Michigan, Ann Arbor}
+\begin{itemize}
+    \item System Identification of Fetch Robot using regression and phase-plane analysis
+\end{itemize}
+
+
+% \divider
+
+% \cvevent{Developed mathematical models and simulations to analyze vehicle ride comfort, focusing on active and passive suspension systems using Matlab Simulink}{Bachelor Thesis}{Jun'18 -- May'19}{National Institute of Technology Rourkela, India}
+% \begin{itemize}
+%     \item Developed mathematical models and simulations to analyze vehicle ride comfort, focusing on active and passive suspension systems using Matlab Simulink.
+% \end{itemize}
+\end{document}
