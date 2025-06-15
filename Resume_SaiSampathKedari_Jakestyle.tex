@@ -1,0 +1,464 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+% \begin{center}
+%     \textbf{\Huge \scshape SAI SAMPATH KEDARI} \\ \vspace{1pt}
+%     \href{mailto:x@x.com}{\underline{sampath@umich.edu}} $|$ 
+%     \href{https://www.linkedin.com/in/}{\underline{linkedin.com/in/sai-sampath-kedari}} $|$ 
+%     \href{ }{\underline{Automotive Engineering}}
+% \end{center}
+
+% \begin{center}
+%     {\Huge \scshape Sai Sampath Kedari} \\ \vspace{1pt}
+%     2573 Stone Rd, Ann Arbor, Michigan 48105 \\ \vspace{1pt}
+%     \small \raisebox{-0.1\height}\faPhone\ +1 734-510-1994 ~ \href{mailto:x@x.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{sampath@umich.com}} ~ 
+%     \href{www.linkedin.com/in/sai-sampath-kedari}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/sai-sampath-kedari}}  ~
+%     \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/KedariSaiSampath}}
+%     \vspace{-8pt}
+% \end{center}
+
+% \begin{center}
+%     \textbf{\Huge \scshape Sai Sampath Kedari} \\ \vspace{1pt}
+%     %2573 Stone Rd, Ann Arbor, Michigan 48105 \\ \vspace{1pt}
+%     \small \raisebox{-0.1\height}\faPhone\ +1 734-510-1994 ~ \href{mailto:sampath@umich.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{sampath@umich.com}} ~ 
+%     \href{https://www.linkedin.com/in/sai-sampath-kedari}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/sai-sampath-kedari}}  ~
+%     \href{https://github.com/SaiSampathKedari}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/KedariSaiSampath}}
+%     \vspace{-8pt}
+% \end{center}
+
+
+
+% \small Seeking full-time research opportunities in \textbf{Dynamics Learning}, \textbf{State Estimation}, and \textbf{Control}, with interest in \textit{foundational machine learning} and \textit{robust algorithm design}.\\[1.5ex]
+
+\begin{center}
+    {\LARGE \textbf{SAI SAMPATH KEDARI}}\\[0.5ex]
+    \small
+    \faEnvelope~\href{mailto:sampath@umich.edu}{sampath@umich.edu} \quad
+    \faPhone~734-510-1994 \quad
+    \faGlobe~\href{https://saisampathkedari.github.io}{SaiSampath} \quad
+    \faLinkedin~\href{https://linkedin.com/in/sai-sampath-kedari}{sai-sampath-kedari} \quad
+    \faGithub~\href{https://github.com/SaiSampathKedari}{sampath} \quad
+    \faTwitter~\href{https://x.com/SSampathKedari}{sampath}
+\end{center}
+
+% \vspace{0.5em}
+\noindent\small\textbf{Objective:} Seeking full-time roles in dynamics learning, state estimation, and control, with strong mathematical foundations in inference, optimization, and systems theory.
+% \vspace{0.5em}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Michigan, Ann Arbor}{Jan 2023 - Apr 2024}
+      {\bf M.S. in Mechanical Engineering (Robotics)}{ \bf GPA 3.66/4}
+    \resumeSubheading
+      {University of Michigan, Ann Arbor}{Aug 2021 - Dec 2022}
+      {\bf M.S. in Automotive Engineering (Dynamics \& control)}
+      {\bf GPA: 3.64/4.0}
+    \resumeSubheading
+      {National Institute of Technology Rourkela, India}{July 2015 - May 2019}
+      {\bf Bachelor of Technology in Mechanical Engineering}
+      {\bf GPA: 8.22/10}
+      % {\textbf{M.S. in Automotive Engineering (Dynamics \& control)}}{ GPA 3.64/4}
+
+    % \begin{itemize}
+    %     \item {\textbf {Coursework:}{ Advanced Embedded Systems (EECS 473)}, \tab {Embedded Control Systems (EECS 461)}, \tab {Servers, The Shell, and Git (SI 504)}, \tab {Real Time Embedded Systems (EECS 571)}, \tab {Introduction to Embedded Systems Research (EECS 507)}, \tab {Neural Engineering (BIOMEDE 517)}}
+    % \end{itemize}
+    % \resumeSubSubheadingLeft
+    %   {Relevant Coursework}{Operating System, Data Structures, Analysis of Algorithms, Artificial Inteligence,  Machine Learning, Networking, Databases, ...}
+  \resumeSubHeadingListEnd
+
+
+%   %-----------PROGRAMMING SKILLS-----------
+% \section{Master's Courses}
+% \begin{multicols}{2}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{STATS 610} { Statistical Inference}\\
+%      \textbf{IOE 611} { Nonlinear Programming}\\
+%      \textbf{EECS 553}{ Machine Learning}\\
+%      \textbf{ROB 501} { Math for Robotics}\\
+     
+%      \textbf{EECS 562} { Nonlinear Systems and Control}\\
+%      \textbf{EECS 565}{ Linear Feedback Control Systems}\\
+%      \textbf{EECS 560}{ Linear Systems Theory}\\
+%      \textbf{EECS 505} {  Computational Data science \& ML}\\  
+%     }}
+%  \end{itemize}
+%  \end{multicols}
+\section{Relevant Graduate Coursework}
+\begin{multicols}{3}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{EECS 460} {Control Systems Design}\\
+     \textbf{EECS 562} {Nonlinear Sys \& Control}\\
+     \textbf{EECS 565} {Linear Feedback Control}\\
+     \textbf{EECS 560} {Linear Sys Theory}\\
+     \textbf{EECS 505} {Comp Data science \& ML}\\
+     \textbf{EECS 553} {Machine Learning}\\
+     \textbf{STATS 510} {Prob Dist Theory}\\
+     \textbf{STATS 511} {Statistical Inference}\\
+     \textbf{AEROSP 567} {Infer/Est/Learning}\\
+     \textbf{ROB 501} {Math for Robotics}\\
+     \textbf{IOE 516} {Stochastic Processes II}\\
+     \textbf{IOE 611} {Nonlinear Programming}\\
+    }}
+ \end{itemize}
+ \end{multicols}
+%------RELEVANT COURSEWORK-------
+% \section{Coursework}
+%     %\resumeSubHeadingListStart
+%     \setlength\itemsep{-.5em}
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Infer/Est/Learning
+%                 \item Prob Dist Theory
+%                 \item Convex Optimization
+%                 \item Machine Learning
+%                 \item Nonlinear Sys \& Control
+%                 \item Math for Robotics
+%                 \item Lin Systems Theory
+%                 \item Data Str \& Algo
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+
+
+%-----------EXPERIENCE-----------
+% \section{Work Experience}
+%   \resumeSubHeadingListStart
+
+%       \resumeSubheading
+%       {GSI Physics 151/241/360}{Aug 2022 -- May 2024} 
+%       {University of Michigan, Ann Arbor}{}
+%       \resumeItemListStart
+%         \resumeItem{Undergrad GSI for Elec \& Magn, Life Sciences Labs, and Physics 360: Honors III. Fall 2022 - Fall 2023. }
+        
+%       \resumeItemListEnd
+      
+%       % \resumeSubheading
+%       % {ROAHM LAB: Prof Ram Vasudevan}{May 2022 -- Aug 2022}
+%       % {Research Study: Dynamics and Control}{}
+%       % \resumeItemListStart
+%       %   \resumeItem{System Identification of Fetch Robot using regression and phase-plane analysis}
+        
+%       % \resumeItemListEnd
+
+%     \resumeSubheading
+%       {Dassault Systems}{Sep. 2020 -- Aug 2021}
+%       {R\&D Catia Software Developer}{}
+%       \resumeItemListStart
+%         \resumeItem{Software Development of FTA Workbench of CATIA using Advanced C++}
+%         % \resumeItem{Code optimization of Numerical Methods for FTA workbench }
+%       \resumeItemListEnd
+%     \resumeSubheading
+%       {Altair Engineering}{Sep. 2019 -- Sep. 2020}
+%       {Software Developer}{}
+%       \resumeItemListStart
+%         % \resumeItem{Tire Force Graphics. Graphical representation for tire contact patch forces that animate and move along with the vehicle using C++ and python for MotionView}
+%         \resumeItem{Development of HyperMesh *Commands(API's), Interaction between C++ and TCL/TK}
+%         \resumeItem{HyperMesh software Development- Meshing and Computational Geometry }
+%     \resumeItemListEnd
+
+%   \resumeSubHeadingListEnd
+  
+% %-----------EXPERIENCE-----------
+% \section{Work Experience}
+
+%     \resumeSubheading
+%     {Intelligent Robotics and Autonomy Lab (iRaL, umich)}{Aug. 2024 -- Present}
+%     {\bf Research Assistant under Prof. Vasileios Tzoumas}{Ann Arbor, MI}\vspace{4pt}
+%     \resumeItemListStart
+%         \resumeItem{}
+%             {Working on robotics state estimation, planning, or control with a focus on mathematical foundations}
+%     \resumeItemListEnd
+    
+%     \resumeSubheading
+%      {Teaching Assistant, UMich, Physics 151/241/360}{Aug 2022 -- May 2024}
+%      { }{ }
+%      % {\bf University of Michigan}{Ann Arbor, MI}\vspace{5pt}
+%     \resumeSubheading
+%      {Dassault Systems}{Sep. 2020 -- Aug 2021}
+%      {\bf Catia R\&D Software Developer}{Pune, India}\vspace{4pt}
+%      \resumeItemListStart
+%         \resumeItem{}
+%           {Software Development of FTA Workbench of CATIA using Advanced C++}
+%      \resumeItemListEnd
+     
+%      \resumeSubheading
+%      {Altair Engineering}{Sep. 2019 -- Sep. 2020}
+%      {\bf Software Developer}{Bangalore, India}\vspace{4pt}
+%      \resumeItemListStart
+%         \resumeItem{}
+%           {HyperMesh software Development- Meshing and Computational Geometry}
+%         \resumeItem{}
+%           {MotionSolve software development- Multi-Body Dynamics Library Models, Tire Force Graphs etc.}
+%      \resumeItemListEnd 
+
+%   \resumeSubHeadingListEnd
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Intelligent Robotics and Autonomy Lab (iRaL, UMich)}{Aug. 2024 -- Present}
+    {\bf Research Assistant under Prof. Vasileios Tzoumas}{Ann Arbor, MI}\vspace{4pt}
+    \resumeItemListStart
+      \resumeItem{}
+        {Working on robotics state estimation, planning, or control with a focus on mathematical foundations}
+    \resumeItemListEnd
+
+     \resumeSubheading
+      {ROAHM LAB: Prof Ram Vasudevan}{May 2022 -- Aug 2022}
+      {\bf Research Study: Dynamics and Control}{Ann Arbor, MI}\vspace{4pt}
+      \resumeItemListStart
+        \resumeItem{}
+        {System Identification of Fetch Robot using regression and phase-plane analysis}
+      \resumeItemListEnd
+  % \resumeSubheading
+  %   {Teaching Assistant, Physics 151/241/360}{Aug. 2022 -- May 2024}
+  %   { }{ }\vspace{-4pt}
+  % \textbf{Teaching Assistant, UMich, Physics 151/241/360} \hfill Aug. 2022 -- May 2024
+
+  \resumeSubheading
+    {Dassault Systemes}{Sep. 2020 -- Aug. 2021}
+    {\bf CATIA R\&D Software Developer}{Pune, India}\vspace{4pt}
+    \resumeItemListStart
+      \resumeItem{}
+        {Software development of FTA Workbench in CATIA using advanced C++}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Altair Engineering}{Sep. 2019 -- Sep. 2020}
+    {\bf Software Developer}{Bangalore, India}\vspace{4pt}
+    \resumeItemListStart
+      \resumeItem{}
+        {Development of HyperMesh *Commands(API’s), Interaction between C++ and Python \& TCL/TK}
+      % \resumeItem{}
+      %   {Contributed to MotionSolve multi-body dynamics library — including tire force graphs and simulation models}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{AEROSP 567: Statistical Inference, Estimation, and Learning}}{Jan 2024 -- May 2024}
+        \resumeItemListStart
+          \resumeItem{Estimated rare-event probabilities via Monte Carlo, importance sampling, MLMC, and control variates. \href{https://drive.google.com/file/d/1Zj1cKTC8zAlYv7HGjWjmpgrZB7GvdGne/view?usp=drive_link}{\textbf{[Report]}}}
+          \resumeItem{Built robotics scent-localization via Bayesian optimization using Gaussian Process regression and PI/EI.
+          \href{https://drive.google.com/file/d/1rmVl7ab2_pvmfXvd2gHSURzPaVzqsEAP/view?usp=drive_link}{\textbf{[Report]}}}
+          \resumeItem{Developed Metropolis-Hastings, DRAM-MCMC for Bayesian inference in nonlinear dynamical systems.
+          \href{https://drive.google.com/file/d/1U3EeO3B7XSDwNVYHuw6a2UAFkQemIKku/view?usp=drive_link}{\textbf{[Report]}}}
+          \resumeItem{Developed Kalman EKF/UKF and Particle Filters for nonlinear state estimation and posterior inference.\href{https://drive.google.com/file/d/1JPkWKbcHBsgtdJ1h-xOj_W0QmosTLNj2/view?usp=drive_link}{\textbf{[Report]}}}
+        \resumeItemListEnd
+    
+      \resumeProjectHeading
+        {\textbf{Literature Review: Prof. Alex Gorodetsky}}{Jan 2024 -- May 2024}
+        \resumeItemListStart
+          \resumeItem{Reviewed “Bayesian System ID: Optimal Management of Parameter, Model, and Measurement Uncertainty.” Explored joint parameter-state estimation and its unifying role in DMD and SINDy frameworks.\href{https://drive.google.com/file/d/1RkUaKzeyvz4vG0zyT5cfK_vOzAU-4TTz/view?usp=drive_link}{\textbf{[Report]}} \href{https://drive.google.com/file/d/1XukVD8PcuhjwbzoHYmLOx7Em8Y0Q46XF/view?usp=drive_link}{\textbf{[Slides]}}}
+        \resumeItemListEnd
+    
+    
+%       \resumeProjectHeading
+%           {\textbf{ROB 590: Prof. Brent Gillespie}}{Jan 2024 -- present}
+%           \resumeItemListStart
+%             \resumeItem{Open Source Flight Controller and Airsim Integration for Aerial Manipulation}
+%              \resumeItem{Bridging the communication gap (through MavLink) btw our
+% open-source flight controller (rc-pilot, developed in the A2Sys Lab) and Microsoft Airsim \& Unreal Engine}
+%           \resumeItemListEnd
+%        \resumeProjectHeading
+%           {\textbf{ROB 590: Prof. Dimitra Panagou}}{Jan 2024 -- present}
+%           \resumeItemListStart
+%             \resumeItem{Implementation of "Safe planning in Dynamic Environments using Conformal prediction" research paper. Motion prediction of objects around drone using social LSTM, and then use this information to help a robot motion planning.}
+%           \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{EECS 553: ML Reproducibility project}}{Sept 2022 -- Dec 2022}
+          \resumeItemListStart
+            \resumeItem{Reproducibility Report on Composing Partial Differential Equations with Physics-Aware Neural Networks, Accepted at ICML2022.\href{https://drive.google.com/file/d/1RkUaKzeyvz4vG0zyT5cfK_vOzAU-4TTz/view?usp=drive_link}{\textbf{[Report]}} \href{https://drive.google.com/file/d/1XukVD8PcuhjwbzoHYmLOx7Em8Y0Q46XF/view?usp=drive_link}{\textbf{[Slides]}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{EECS 565: Lin Feedback Control project}}{Jan 2022 -- Apr 2022}
+          \resumeItemListStart
+            \resumeItem{MIMO control design using LQR and loop transfer recovery for the Reactive Ion Etching Process}
+          \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{Bachelor's thesis} $|$ \emph{"Dynamic Analysis and control studies of vehicle suspension systems" }}{June 2018 -- 2019}
+      %     \resumeItemListStart
+      %       \resumeItem{Mathematical Modeling and Simulation of Vehicle Ride Comfort on Active and Passive Suspension models using Matlab Simulink.}
+      %     \resumeItemListEnd
+      %\resumeProjectHeading
+        %  {\textbf{Formula Student Team} $|$ \emph{Vehicle Dynamics, Suspension \& Tire}}{May 2016 -- May 2019}
+         % \resumeItemListStart
+          %  \resumeItem{Fitted TTC Tire data to Pacejka 2002 model and extracted all the Tire coefficients using Matlab.}
+            % \resumeItem{Analyzing the performance of Tires from TTC tire data using Magic formula Pacejka 2002 model in
+            % Matlab.}
+            % \resumeItem{Developed a simulation software that takes all the vehicle parameters and TTC raw tire data as input and generates tire % property files(*.tir) using C++ and Qt Creator for UI. }
+     %    \resumeItemListEnd
+     % \resumeProjectHeading
+     %      {\textbf{Research Project} $|$ \emph{Vehicle Handling Simulation software}}{Jan 2019 -- May 2019}
+     %      \resumeItemListStart
+     %        \resumeItem{Developed a simulation software that takes all the vehicle parameters and TTC raw tire data as input and generates tire property files(*.tir) using C++ and Qt Creator for UI. }
+     %      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+% \section{Research Interests}
+%     \begin{multicols}{3}
+%     \begin{itemize}
+%         \item Robotics 
+%         \item Control Theory
+%         \item Motion Planning
+%         \item Convex Optimization
+%         \item Machine Learning
+%         \item Statistical Inference and Estim
+%     \end{itemize}
+%     \end{multicols}
+
+% \section{Research Interests}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Infer/Est/Learning
+%                 \item Robotics
+%                 \item Convex Optimization
+%                 \item Control Theory
+%                 \item Nonlinear Sys \& Control
+%                 \item Math for Robotics
+%                 \item statistical Inference and Estim
+%                 \item Data Str \& Algo
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \textbf{Languages \& Tools:} C, C++, Python, ROS1, MATLAB, CMake, Makefile, Bash, TCL/TK
+\end{itemize}
+
+ 
+%-------------------------------------------
+\end{document}
